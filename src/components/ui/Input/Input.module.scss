@@ -1,0 +1,59 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1d293d;
+
+  &:after {
+    content: "*";
+    color: #ec003f;
+    margin-left: 0.25rem;
+  }
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #cad5e2;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 100ms ease-in-out;
+  background-color: #ffffff;
+  color: #020618;
+
+  &:focus {
+    outline: none;
+    border-color: #101828;
+    box-shadow: 0 0 0 3px #cad5e2;
+  }
+
+  &.error {
+    border-color: #ec003f;
+
+    &:focus {
+      border-color: #a50036;
+      box-shadow: 0 0 0 3px #ffe4e6;
+    }
+  }
+
+  &::placeholder {
+    color: #45556c;
+  }
+
+  &:disabled {
+    background-color: #f1f5f9;
+    color: #020618;
+    cursor: not-allowed;
+  }
+}
+
+.errorMessage {
+  font-size: 0.875rem;
+  color: #ec003f;
+  font-weight: 500;
+}
